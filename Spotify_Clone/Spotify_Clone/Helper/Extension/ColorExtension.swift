@@ -24,7 +24,7 @@ extension Color {
 
     // Icon colors
     static let iconPrimary = Color(uiColor: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1))  // White
-    static let iconSecondary = Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1))  // Gray
+    static let iconSecondary = Color(uiColor: UIColor(red: 179/255, green: 179/255, blue: 179/255, alpha: 1))  // Gray
     static let iconGreen = Color(uiColor: UIColor(red: 0/255, green: 199/255, blue: 0/255, alpha: 1))  // Green
     static let iconBlack = Color(uiColor: UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1))  // Black
 
