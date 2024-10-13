@@ -11,7 +11,8 @@ struct GridCard: View {
     let albumImg : [String]
     let albumTitles : [String]
     
-    init(cardImg: [String] = ["CardImg", "CardImg", "CardImg", "CardImg", "CardImg", "CardImg"], albumTitles: [String] = ["OK Computer", "Govinda", "The Last Dinner Party", "The Cure", "Playlist Viper", "Guts (spilled)"]) {
+    init(cardImg: [String] = ["CardImg", "CardImg", "CardImg", "CardImg", "CardImg", "CardImg"],
+         albumTitles: [String] = ["OK Computer", "Govinda", "The Last Dinner Party", "The Cure", "Playlist Viper", "Guts (spilled)"]) {
         self.albumImg = cardImg
         self.albumTitles = albumTitles
     }
@@ -49,10 +50,11 @@ struct GridCard: View {
 }
 
 #Preview {
-    let titles = ["OK Computer", "Govinda", "The Last Dinner Party", "The Cure", "Playlist Viper", "Guts (spilled)"]
-    let images = ["CardImg", "CardImg", "CardImg", "CardImg", "CardImg", "CardImg"]
+//    let titles = ["OK Computer", "Govinda", "The Last Dinner Party", "The Cure", "Playlist Viper", "Guts (spilled)"]
+//    let images = ["CardImg", "CardImg", "CardImg", "CardImg", "CardImg", "CardImg"]
     VStack{
-        GridCard(albumImg: images, albumTitles: titles)
+//        GridCard(albumImg: images, albumTitles: titles)
 
+        GridCard()
     }
 }
