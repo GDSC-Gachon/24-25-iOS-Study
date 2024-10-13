@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RootView: View {
     
     @State private var showMainView = false
     
@@ -16,11 +16,24 @@ struct ContentView: View {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             if showMainView {
-                VStack {
-                    Text("Spotify!")
-                        .font(.spotify(.title_1))
-                        .foregroundColor(Color.green)
+                TabView {
+                    HomepageView()
+                        .tabItem {
+                            Image("ico-32-home")
+                            Text("Home")
+                        }
+                    HomepageView()
+                        .tabItem {
+                            Image("ico-32-search")
+                            Text("Serch")
+                        }
+                    HomepageView()
+                        .tabItem {
+                            Image("ico-32-library")
+                            Text("Your library")
+                        }
                 }
+                .onAppear{setupTabBarAppearance()}
             } else {
                 SplashView()
                     .onAppear {
@@ -37,5 +50,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    RootView()
 }
