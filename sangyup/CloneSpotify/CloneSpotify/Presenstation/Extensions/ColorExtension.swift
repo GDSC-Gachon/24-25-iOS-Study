@@ -14,4 +14,7 @@ extension Color {
     static let gray = Color(uiColor: UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1))
     /// #1ED760
     static let green = Color(uiColor: UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1))
+    /// #B3B3B3
+    static let gray1 = Color(uiColor: UIColor(red: 179/255, green: 179/255, blue: 179/255, alpha: 1))
+
 }
