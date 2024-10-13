@@ -13,7 +13,7 @@ struct RoundedCorners: Shape {
     var tr: CGFloat = 0.0
     var bl: CGFloat = 0.0
     var br: CGFloat = 0.0
-
+    
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath()
         path.move(to: CGPoint(x: rect.minX, y: rect.midY))
@@ -27,5 +27,28 @@ struct RoundedCorners: Shape {
         path.addQuadCurve(to: CGPoint(x: rect.minX, y: rect.minY + tl), controlPoint: CGPoint(x: rect.minX, y: rect.minY))
         path.close()
         return Path(path.cgPath)
+    }
+}
+
+func setupTabBarAppearance() {
+    let appearance = UITabBarAppearance()
+    appearance.configureWithOpaqueBackground()
+    
+    // 배경 색상 설정
+    appearance.backgroundColor = UIColor.black
+    
+    // 선택된 아이템의 색상
+    UITabBar.appearance().tintColor = UIColor.white
+    
+    // 선택되지 않은 아이템의 색상
+    UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+    
+    // 선택된 아이템의 아이콘 및 텍스트 색상 설정
+    appearance.stackedLayoutAppearance.selected.iconColor = UIColor.white
+    appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.white]
+    
+    UITabBar.appearance().standardAppearance = appearance
+    if #available(iOS 15.0, *) {
+        UITabBar.appearance().scrollEdgeAppearance = appearance
     }
 }
