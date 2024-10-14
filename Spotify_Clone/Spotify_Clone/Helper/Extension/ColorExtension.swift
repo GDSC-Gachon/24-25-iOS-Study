@@ -30,7 +30,7 @@ extension Color {
 
     // Chips colors
     static let chipPrimary = Color(uiColor: UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1))  // Black
-    static let chipSecondary = Color(uiColor: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1))  // White
+    static let chipSecondary = Color(uiColor: UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1))  // Gray
     static let chipGreen = Color(uiColor: UIColor(red: 0/255, green: 199/255, blue: 0/255, alpha: 1))  // Green
 
     // Special colors
