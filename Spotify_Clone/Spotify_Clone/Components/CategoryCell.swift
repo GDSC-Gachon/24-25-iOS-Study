@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CategoryCell: View {
+<<<<<<< HEAD
     var categorytitle: String = "All" // 선택 기본값을 All로 설정
     var isSelected: Bool = false
     
@@ -15,6 +16,15 @@ struct CategoryCell: View {
         Text(categorytitle) // title 변수 반영 -> 기본값 All로 설정 가능
             .font(Font.customFont(.body7_regular))
             .frame(width: getWidth(for: categorytitle), height: 30) // 최소 높이는 30으로 고정
+=======
+    var title: String = "All" // 선택 기본값을 All로 설정
+    var isSelected: Bool = false
+    
+    var body: some View {
+        Text(title) // title 변수 반영 -> 기본값 All로 설정 가능
+            .font(Font.customFont(.body7_regular))
+            .frame(width: getWidth(for: title), height: 30) // 최소 높이는 30으로 고정
+>>>>>>> origin/riwon/week01
             .background(isSelected ? Color.chipGreen : Color.chipSecondary)
             .foregroundStyle(isSelected ? Color.textTertiary : Color.textPrimary)
             .cornerRadius(16)

@@ -22,7 +22,11 @@ struct HomepageView: View {
                 
                 ForEach(Category.allCases, id: \.self) { category in
                     CategoryCell(
+<<<<<<< HEAD
                         categorytitle: category.rawValue.capitalized,
+=======
+                        title: category.rawValue.capitalized,
+>>>>>>> origin/riwon/week01
                         isSelected: category == selectedCategory
                     )
                     .onTapGesture {
