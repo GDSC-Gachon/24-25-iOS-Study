@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct HomepageView: View {
+    @State private var selectedCategory: Category = .All // All을 기본값으로 선택
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.surfacePrimary.edgesIgnoringSafeArea(.all)
+            
+            // Profile & Category
+            HStack(spacing: 0) {
+                Image("Profile")
+                
+                Spacer().frame(width: 16)
+                
+                ForEach(Category.allCases, id: \.self) { category in
+                    CategoryCell(
+                        title: category.rawValue.capitalized,
+                        isSelected: category == selectedCategory
+                    )
+                    .onTapGesture {
+                        selectedCategory = category
+                    }
+                }
+                Spacer()
+            }
+            .padding(.leading, 16) // 왼쪽 간격 
+        }
     }
 }
 
