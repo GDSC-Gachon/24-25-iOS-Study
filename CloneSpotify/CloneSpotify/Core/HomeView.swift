@@ -19,20 +19,20 @@ struct HomeView: View {
         LazyVStack(spacing: 1, pinnedViews: [.sectionHeaders], content: {
           Section {
             VStack {
-              recentsSection
+              smallCardSection
             }
             .padding(.horizontal, 16)
             
             newReleaseSection()
               .padding(.horizontal, 16)
               .padding(.top, 24)
+              .padding(.bottom, 8)
             
-            ForEach(0..<10) { _ in
-              Rectangle()
-                .fill(.spotifyGreen)
-                .frame(width: 200, height: 200)
-            }
-          } header: {
+            listRows
+              .padding(.top, 24)
+              .padding(.bottom, 8)
+            
+            } header: {
             header
           }
         })
@@ -75,16 +75,16 @@ struct HomeView: View {
     .background(Color.spotifyBlack)
   }
   
-  private var recentsSection: some View {
+  private var smallCardSection: some View {
     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
-      RecentCell(title: "title")
-      RecentCell(title: "titletitletitletitletitle")
-      RecentCell(title: "title")
-      RecentCell(title: "title")
-      RecentCell(title: "title")
-      RecentCell(title: "title")
-      RecentCell(title: "title")
-      RecentCell(title: "title")
+      SmallCardCell(title: "title")
+      SmallCardCell(title: "titletitletitletitletitle")
+      SmallCardCell(title: "title")
+      SmallCardCell(title: "title")
+      SmallCardCell(title: "title")
+      SmallCardCell(title: "title")
+      SmallCardCell(title: "title")
+      SmallCardCell(title: "title")
     }
     .padding(.vertical, 8)
   }
@@ -96,6 +96,33 @@ struct HomeView: View {
       title: "I Wanna Be Yours",
       subtitle: "Single • Arctic Monkeys"
     )
+  }
+  
+  private var listRows: some View {
+    ForEach(0..<6) { _ in
+      VStack(spacing: 8) {
+        Text("Your top mixes")
+          .font(.title)
+          .fontWeight(.semibold)
+          .foregroundStyle(.spotifyWhite)
+          .frame(maxWidth: .infinity, alignment: .leading)
+          .padding(.horizontal, 16)
+        
+        ScrollView(.horizontal) {
+          HStack(alignment: .top, spacing: 16) {
+            ForEach(0..<6) { _ in
+              JacketCell(
+                jacketImageSize: 147,
+                title: "Daily Mix 1",
+                subtitle: "David Bowie, Julia Jacklin, Julien Baker an..."
+              )
+            }
+          }
+          .padding(.horizontal, 16)
+        }
+        .scrollIndicators(.hidden)
+      }
+    }
   }
 }
 

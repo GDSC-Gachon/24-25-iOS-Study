@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecentCell: View {
+struct SmallCardCell: View {
   
   var title: String = "TitleTitleTitleTitleTitleTitleTitleTitleTitle"
   
@@ -37,12 +37,12 @@ struct RecentCell: View {
     
     VStack {
       HStack {
-        RecentCell()
-        RecentCell()
+        SmallCardCell()
+        SmallCardCell()
       }
       HStack {
-        RecentCell()
-        RecentCell()
+        SmallCardCell()
+        SmallCardCell()
       }
     }
   }
