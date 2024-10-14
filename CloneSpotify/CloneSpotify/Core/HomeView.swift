@@ -40,6 +40,7 @@ struct HomeView: View {
       }
       .scrollIndicators(.hidden)
       .clipped()
+      
     }
     .toolbar(.hidden, for: .navigationBar)
   }
