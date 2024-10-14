@@ -10,7 +10,6 @@ import SwiftUI
 struct EmptyView: View {
     var body: some View {
       Color.white.ignoresSafeArea()
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 

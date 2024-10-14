@@ -22,7 +22,10 @@ struct HomeView: View {
               recentsSection
             }
             .padding(.horizontal, 16)
-              
+            
+            newReleaseSection()
+              .padding(.horizontal, 16)
+              .padding(.top, 24)
             
             ForEach(0..<10) { _ in
               Rectangle()
@@ -84,6 +87,15 @@ struct HomeView: View {
       RecentCell(title: "title")
     }
     .padding(.vertical, 8)
+  }
+  
+  private func newReleaseSection() -> some View {
+    NewReleaseCell(
+      headline: "New release from",
+      subheadline: "Arctic Monkeys",
+      title: "I Wanna Be Yours",
+      subtitle: "Single • Arctic Monkeys"
+    )
   }
 }
 
