@@ -40,16 +40,6 @@
 			path = CloneSpotify;
 			sourceTree = "<group>";
 		};
-		995206432CBA5DD500697FA0 /* CloneSpotifyTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CloneSpotifyTests;
-			sourceTree = "<group>";
-		};
-		9952064D2CBA5DD500697FA0 /* CloneSpotifyUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CloneSpotifyUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +73,6 @@
 			children = (
 				99C128CD2CBC92BD009C5CE4 /* Shared */,
 				995206322CBA5DD300697FA0 /* CloneSpotify */,
-				995206432CBA5DD500697FA0 /* CloneSpotifyTests */,
-				9952064D2CBA5DD500697FA0 /* CloneSpotifyUITests */,
 				99C128D02CBC93C2009C5CE4 /* Frameworks */,
 				995206312CBA5DD300697FA0 /* Products */,
 			);
@@ -154,9 +142,6 @@
 			dependencies = (
 				995206422CBA5DD500697FA0 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				995206432CBA5DD500697FA0 /* CloneSpotifyTests */,
-			);
 			name = CloneSpotifyTests;
 			packageProductDependencies = (
 			);
@@ -176,9 +161,6 @@
 			);
 			dependencies = (
 				9952064C2CBA5DD500697FA0 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				9952064D2CBA5DD500697FA0 /* CloneSpotifyUITests */,
 			);
 			name = CloneSpotifyUITests;
 			packageProductDependencies = (
