@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		99C128D22CBC93D1009C5CE4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 99C128D12CBC93D1009C5CE4 /* SDWebImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		995206412CBA5DD500697FA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		995206302CBA5DD300697FA0 /* CloneSpotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneSpotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995206402CBA5DD500697FA0 /* CloneSpotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloneSpotifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9952064A2CBA5DD500697FA0 /* CloneSpotifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloneSpotifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C128D32CBC93E5009C5CE4 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99C128D22CBC93D1009C5CE4 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +81,11 @@
 		995206272CBA5DD300697FA0 = {
 			isa = PBXGroup;
 			children = (
+				99C128CD2CBC92BD009C5CE4 /* Shared */,
 				995206322CBA5DD300697FA0 /* CloneSpotify */,
 				995206432CBA5DD500697FA0 /* CloneSpotifyTests */,
 				9952064D2CBA5DD500697FA0 /* CloneSpotifyUITests */,
+				99C128D02CBC93C2009C5CE4 /* Frameworks */,
 				995206312CBA5DD300697FA0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +98,21 @@
 				9952064A2CBA5DD500697FA0 /* CloneSpotifyUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		99C128CD2CBC92BD009C5CE4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				99C128D32CBC93E5009C5CE4 /* ImageLoaderView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		99C128D02CBC93C2009C5CE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +135,7 @@
 			);
 			name = CloneSpotify;
 			packageProductDependencies = (
+				99C128D12CBC93D1009C5CE4 /* SDWebImage */,
 			);
 			productName = CloneSpotify;
 			productReference = 995206302CBA5DD300697FA0 /* CloneSpotify.app */;
@@ -195,6 +219,9 @@
 			);
 			mainGroup = 995206272CBA5DD300697FA0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				99C128CF2CBC9320009C5CE4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 995206312CBA5DD300697FA0 /* Products */;
 			projectDirPath = "";
@@ -558,6 +585,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99C128CF2CBC9320009C5CE4 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99C128D12CBC93D1009C5CE4 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99C128CF2CBC9320009C5CE4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 995206282CBA5DD300697FA0 /* Project object */;
 }
