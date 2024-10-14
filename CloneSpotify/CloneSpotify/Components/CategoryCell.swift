@@ -15,13 +15,21 @@ struct CategoryCell: View {
   var body: some View {
     Text(title)
       .font(.callout)
+      .font(.system(size: 11))
       .padding(.vertical, 7)
       .padding(.horizontal, 16)
-      .background(isSelected ? .spotifyGreen : .spotifyDarkGray)
-      .foregroundStyle(isSelected ? .spotifyBlack : .spotifyWhite)
+      .themeColors(isSelected: isSelected)
       .cornerRadius(16)
   }
           
+}
+
+extension View {
+  func themeColors(isSelected: Bool) -> some View {
+    self
+      .background(isSelected ? .spotifyGreen : .spotifyDarkGray)
+      .foregroundStyle(isSelected ? .spotifyBlack : .spotifyWhite)
+  }
 }
 
 #Preview {

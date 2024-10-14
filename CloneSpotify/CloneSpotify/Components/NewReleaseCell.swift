@@ -1,5 +1,5 @@
 //
-//  EmptyView.swift
+//  NewReleaseCell.swift
 //  CloneSpotify
 //
 //  Created by Lee Juwon on 10/12/24.
@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct EmptyView: View {
+struct NewReleaseCell: View {
     var body: some View {
-      Color.white.ignoresSafeArea()
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    EmptyView()
+    NewReleaseCell()
 }

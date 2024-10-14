@@ -16,16 +16,29 @@ struct HomeView: View {
       Color.spotifyBlack.ignoresSafeArea()
       
       ScrollView(.vertical) {
-        header
-        
-        ForEach(0..<20) { _ in
-          Rectangle()
-            .frame(width: 200, height: 200)
-        }
+        LazyVStack(spacing: 1, pinnedViews: [.sectionHeaders], content: {
+          Section {
+            VStack {
+              recentsSection
+            }
+            .padding(.horizontal, 16)
+              
+            
+            ForEach(0..<10) { _ in
+              Rectangle()
+                .fill(.spotifyGreen)
+                .frame(width: 200, height: 200)
+            }
+          } header: {
+            header
+          }
+        })
+        .padding(.top, 8)
       }
       .scrollIndicators(.hidden)
-
+      .clipped()
     }
+    .toolbar(.hidden, for: .navigationBar)
   }
   
   private var header: some View {
@@ -53,8 +66,27 @@ struct HomeView: View {
       }
       .scrollIndicators(.hidden)
     }
+    .padding(.top, 33)
+    .padding(.bottom, 8)
+    .padding(.leading, 16)
+    .background(Color.spotifyBlack)
+  }
+  
+  private var recentsSection: some View {
+    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
+      RecentCell(title: "title")
+      RecentCell(title: "titletitletitletitletitle")
+      RecentCell(title: "title")
+      RecentCell(title: "title")
+      RecentCell(title: "title")
+      RecentCell(title: "title")
+      RecentCell(title: "title")
+      RecentCell(title: "title")
+    }
+    .padding(.vertical, 8)
   }
 }
+
 
 #Preview {
     HomeView()
